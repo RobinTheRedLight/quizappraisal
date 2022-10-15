@@ -1,0 +1,9 @@
+.image{
+    background-color: rgb(232,232,232);
+}
+@media screen and (min-width: 922px) {
+    .img-wrap {
+        width: 18rem;
+        margin: 0 auto;
+    }
+}

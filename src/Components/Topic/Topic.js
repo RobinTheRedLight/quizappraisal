@@ -3,15 +3,16 @@ import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import './Topic.css'
 
-const Topic = () => {
+const Topic = ({ topic }) => {
+    console.log(topic);
     return (
-        <Card className="text-center">
-            <Card.Img variant="top" src="holder.js/100px180" />
+        <Card className="img-wrap text-center">
+            <Card.Img className='image' variant="top" src={topic.logo} />
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Button variant="primary">Go somewhere</Button>
+                <Card.Title>{topic.name}</Card.Title>
+                <Button variant="primary">Start Quiz</Button>
             </Card.Body>
-            <Card.Footer className="text-muted">2 days ago</Card.Footer>
+            <Card.Footer className="text-muted">Total Quiz : {topic.total}</Card.Footer>
         </Card>
     );
 };

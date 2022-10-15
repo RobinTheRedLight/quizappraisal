@@ -4,6 +4,7 @@ import Blog from './Components/Blog/Blog';
 import Histogram from './Components/Histogram/Histogram';
 import Home from './Components/Home/Home';
 import Main from './Components/Main/Main';
+import Quiz from './Components/Quiz/Quiz';
 
 function App() {
   const router = createBrowserRouter([
@@ -25,6 +26,13 @@ function App() {
         {
           path: '/histogram',
           element: <Histogram></Histogram>
+        },
+        {
+          path: '/quiz/:quizId',
+          loader: async ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`);
+          },
+          element: <Quiz></Quiz>
         }
       ]
     }

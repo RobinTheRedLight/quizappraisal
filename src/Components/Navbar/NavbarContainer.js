@@ -14,7 +14,7 @@ const NavbarContainer = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav>
-                        <Nav.Link eventKey={1} as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link eventKey={1} as={Link} to="/">Home</Nav.Link>
                         <Nav.Link eventKey={2} as={Link} to="/histogram">Histogram</Nav.Link>
                         <Nav.Link eventKey={3} as={Link} to="/blog">Blog</Nav.Link>
                     </Nav>

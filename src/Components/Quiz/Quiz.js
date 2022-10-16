@@ -1,19 +1,18 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { EyeIcon } from '@heroicons/react/24/solid';
+import Question from '../Question/Question';
 import './Quiz.css';
 
 const Quiz = () => {
     const quizData = useLoaderData();
-    console.log(quizData.data);
-    const {questions} = quizData.data;
-    console.log(questions);
+    const { questions } = quizData.data;
     return (
         <div className='text-center'>
             <h1>Quiz</h1>
             <div>
-                <h4></h4>
-                <EyeIcon className="icon" />
+                {
+                    questions.map(questioN => <Question key={questioN.id} questioN={questioN} ></Question>)
+                }
             </div>
         </div>
     );

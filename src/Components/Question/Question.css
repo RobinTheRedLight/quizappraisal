@@ -1,0 +1,22 @@
+/* .upper-section {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.options {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.question {
+    border: 2px solid #3D9970;
+    width: 60%;
+    margin: 2% auto;
+    padding: 2%;
+}
+
+.option {
+    border: 1px solid #01FF70;
+    margin: 7% 0%;
+    padding: 5%;
+}

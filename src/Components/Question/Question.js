@@ -9,6 +9,18 @@ const Question = ({ questioN }) => {
     const { question, correctAnswer, options } = questioN;
     const questionStr = question.replace(/<\/?[^>]+(>|$)/g, '');
     const [alertMaker, setAlertMaker] = useState(correctAnswer);
+    const addToast = () => {
+        toast.info(`Answer: ${correctAnswer}`, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    }
     const answerAlert = answer => {
         if (alertMaker === answer) {
             toast.success('🦄 Right Answer!', {
@@ -43,7 +55,7 @@ const Question = ({ questioN }) => {
                         <h4>{questionStr}</h4>
                     </div>
                     <div className="iconContainer">
-                        <EyeIcon  className="icon" />
+                        <EyeIcon onClick={addToast} className="icon" />
                     </div>
                 </div>
                 <div className="options">

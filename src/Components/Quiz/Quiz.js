@@ -5,10 +5,10 @@ import './Quiz.css';
 
 const Quiz = () => {
     const quizData = useLoaderData();
-    const { questions } = quizData.data;
+    const { questions, name } = quizData.data;
     return (
         <div className='text-center'>
-            <h1>Quiz</h1>
+            <h1>{name} Quiz</h1>
             <div>
                 {
                     questions.map(questioN => <Question key={questioN.id} questioN={questioN} ></Question>)

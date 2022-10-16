@@ -36,6 +36,13 @@ function App() {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`);
           },
           element: <Quiz></Quiz>
+        },
+        {
+          path: '*',
+          element:
+            <div>
+              <h1 className='text-center'>404 Page not found</h1>
+            </div>
         }
       ]
     }
